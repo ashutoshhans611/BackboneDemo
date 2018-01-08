@@ -19,5 +19,13 @@ var heirloomRoses = new app.singleFlower({
     img: "images/heirloomRoses.jpg",
     link: "heirloomRose"
  });
+ 
+var flowerGroup = new app.FlowersCollection([
+    redRoses, rainbowRoses
+]);
 
- rainbowRoses.set('price', 25);
+flowerGroup.add(heirloomRoses);
+flowerGroup.remove(redRoses);
+console.log(flowerGroup.toJSON());
+
+rainbowRoses.set('price', 25);
