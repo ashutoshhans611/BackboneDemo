@@ -16,16 +16,34 @@ var rainbowRoses = new app.singleFlower({
 var heirloomRoses = new app.singleFlower({
     name: "Heirloom roses",
     price: 19.95,
-    img: "images/heirloomRoses.jpg",
+    img: "images/heirloomPinkRoses.jpg",
     link: "heirloomRose"
  });
  
 var flowerGroup = new app.FlowersCollection([
-    redRoses, rainbowRoses
+    redRoses, rainbowRoses, heirloomRoses
 ]);
 
-flowerGroup.add(heirloomRoses);
-flowerGroup.remove(redRoses);
-console.log(flowerGroup.toJSON());
+var flowerGroupView = new app.allFlowersView({
+    collection: flowerGroup
+});
 
-rainbowRoses.set('price', 25);
+$("#allFlowers").html(flowerGroupView.render().el);
+
+//European FLowers
+
+var tantalizingTulips = new app.europeanFlower({
+    price: 20,
+    color: "White"
+});
+
+var fluerDeLis = new app.europeanFlower({
+    price: 25,
+    color: "Red"
+});
+
+tantalizingTulips.set("originCountry","Holland");
+
+var europeanFlowersGroup = new app.EuropeanFlowersCollection([tantalizingTulips,fluerDeLis]);
+
+console.log(europeanFlowersGroup.toJSON());

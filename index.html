@@ -9,17 +9,32 @@
 <body>
 
   <div class="site">
-
     <div class="logo">  
       <img src="images/site/logo.png" width="207" height="124" alt="Hansel and Petal" />
     </div>
+    <div id="allFlowers"></div>
+    <div id="copy"></div>
   </div> 
 
+ 
+  <script id="flowerElement" type="text/template">
+    <a href="#<%= link %>"><img src="<%= img %>" class="image" /></a>
+    <ul>
+      <li class="flowerInfo"><strong>Name:</strong> <%= name %></li>
+      <li class="flowerInfo"><strong>Price:</strong> <%= price %></li>
+      <li class="flowerInfo"><strong>Color:</strong> <%= color %></li>
+    </ul>
+  </script>
+  
   <script src="js/libs/jquery-3.2.1.min.js"></script>
   <script src="js/libs/underscore.js"></script>
   <script src="js/libs/backbone.js"></script>
   <script src="js/models/singleFlowerModel.js"></script>
+  <script src="js/models/europeanFlowerModel.js"></script>
+  <script src="js/views/singleFlowerView.js"></script>
+  <script src="js/views/allFlowersView.js"></script>
   <script src="js/collections/allFlowers.js"></script>
+  <script src="js/collections/allEuropeanFlowers.js"></script>
   <script src="js/flowerApp.js"></script>
 
 </body>
