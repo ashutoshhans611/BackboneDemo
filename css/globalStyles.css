@@ -59,3 +59,25 @@ body {
 .bgColorImage {
   background-color: #CEBDBD;
 }
+
+.stateFlowerHeader {
+  color: red;
+  text-decoration: underline;
+  text-align: center;
+}
+
+#stateFlowers {
+  padding: 20px;
+  margin: 0 auto;
+  text-align: center;
+  width: 362px;
+  background-color: #E0E0E0;
+  border: 1px solid #CC6699;
+}
+
+.stateFlowerStyle {
+  list-style-type: none;
+  text-align: left;
+  margin-bottom: 5px;
+  width: 300px;
+}

@@ -13,10 +13,17 @@
       <img src="images/site/logo.png" width="207" height="124" alt="Hansel and Petal" />
     </div>
     <div id="allFlowers"></div>
+    <h2 class="stateFlowerHeader">Pacific Northwest State Flowers</h2>
+    <div id="stateFlowers"></div>
     <div id="copy"></div>
   </div> 
 
- 
+  <script id="stateFlowerElement" type="text/template">
+    <ul>
+      <li class="stateFlowerStyle">State: <%= state %></li>
+      <li class="stateFlowerStyle">Flower: <%= flower %></li>
+    </ul>
+  </script>
   <script id="flowerElement" type="text/template">
     <a href="#<%= link %>"><img src="<%= img %>" class="image" /></a>
     <ul>
@@ -31,10 +38,14 @@
   <script src="js/libs/backbone.js"></script>
   <script src="js/models/singleFlowerModel.js"></script>
   <script src="js/models/europeanFlowerModel.js"></script>
+  <script src="js/models/stateFlowerModel.js"></script>
   <script src="js/views/singleFlowerView.js"></script>
   <script src="js/views/allFlowersView.js"></script>
+  <script src="js/views/stateFlowerView.js"></script>
+  <script src="js/views/allStateFlowersView.js"></script>
   <script src="js/collections/allFlowers.js"></script>
   <script src="js/collections/allEuropeanFlowers.js"></script>
+  <script src="js/collections/allStateFlowers.js"></script>
   <script src="js/flowerApp.js"></script>
 
 </body>

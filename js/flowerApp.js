@@ -47,3 +47,25 @@ tantalizingTulips.set("originCountry","Holland");
 var europeanFlowersGroup = new app.EuropeanFlowersCollection([tantalizingTulips,fluerDeLis]);
 
 console.log(europeanFlowersGroup.toJSON());
+
+//state flowers
+
+var wash = new app.stateFlower({
+    state: "Washington",
+    flower: "Rhododendron macrophyllum"
+});
+
+var ore = new app.stateFlower({
+    state: "Oregon",
+    flower: "Oregon Grape"
+  });
+
+var stateFlowerGroup = new app.stateFlowerCollection([
+    wash, ore
+]); 
+
+var stateFlowerGroupView = new app.allStateFlowerView({
+    collection: stateFlowerGroup
+});
+
+$("#stateFlowers").html(stateFlowerGroupView.render().el);
