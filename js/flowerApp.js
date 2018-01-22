@@ -69,3 +69,7 @@ var stateFlowerGroupView = new app.allStateFlowerView({
 });
 
 $("#stateFlowers").html(stateFlowerGroupView.render().el);
+
+var flowerRouter = new app.Router();
+
+Backbone.history.start();
